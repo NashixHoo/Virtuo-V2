@@ -1,0 +1,226 @@
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+background:#020611;
+color:white;
+padding-bottom:100px;
+}
+
+.background{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 50% -10%,#214F90 0%,#081322 35%,#020611 80%);
+z-index:-2;
+}
+
+.background::after{
+content:"";
+position:absolute;
+inset:0;
+background:url("assets/stars.svg");
+opacity:.25;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:28px 20px 10px;
+}
+
+.creator{
+font-size:11px;
+letter-spacing:2px;
+color:#7EE7FF;
+}
+
+h1{
+margin:8px 0 4px;
+font-size:44px;
+letter-spacing:3px;
+}
+
+header p{
+margin:0;
+color:#A9BDD8;
+}
+
+.avatar{
+width:56px;
+height:56px;
+display:grid;
+place-items:center;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+font-size:22px;
+color:#7EE7FF;
+}
+
+main{
+padding:20px;
+}
+
+.glass{
+background:rgba(12,24,43,.55);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:28px;
+padding:22px;
+margin-bottom:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.pill{
+display:inline-block;
+padding:7px 12px;
+border-radius:999px;
+background:#143057;
+color:#7EE7FF;
+font-size:12px;
+}
+
+.hero{
+font-size:30px;
+margin:10px 0;
+}
+
+.subtitle{
+color:#A9BDD8;
+line-height:1.5;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin-top:16px;
+}
+
+.tile{
+padding:20px;
+border-radius:22px;
+background:linear-gradient(160deg,
+rgba(41,90,165,.35),
+rgba(10,20,36,.78));
+border:1px solid rgba(255,255,255,.08);
+min-height:150px;
+transition:.25s;
+}
+
+.tile:hover{
+transform:translateY(-3px);
+}
+
+.tile .icon{
+font-size:34px;
+}
+
+.tile h3{
+margin:12px 0 8px;
+font-size:18px;
+}
+
+.tile p{
+margin:0;
+font-size:13px;
+color:#A9BDD8;
+}
+
+.song-cover{
+height:190px;
+border-radius:22px;
+background:linear-gradient(135deg,#234F90,#081322);
+display:grid;
+place-items:center;
+font-size:64px;
+margin-bottom:18px;
+}
+
+.row{
+display:flex;
+gap:12px;
+}
+
+.button{
+flex:1;
+display:block;
+text-align:center;
+text-decoration:none;
+padding:15px;
+border-radius:16px;
+font-weight:700;
+}
+
+.primary{
+background:linear-gradient(135deg,#7EE7FF,#57A9FF);
+color:#03101D;
+}
+
+.secondary{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.08);
+color:white;
+}
+
+.dial{
+font-size:72px;
+font-weight:800;
+text-align:center;
+margin:20px 0;
+}
+
+.controls{
+display:flex;
+justify-content:center;
+gap:16px;
+}
+
+.controls button{
+width:64px;
+height:64px;
+border-radius:18px;
+border:none;
+background:#173765;
+color:white;
+font-size:24px;
+}
+
+.tabbar{
+position:fixed;
+bottom:12px;
+left:12px;
+right:12px;
+display:flex;
+background:rgba(7,19,31,.78);
+backdrop-filter:blur(22px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:10px;
+}
+
+.tabbar button{
+flex:1;
+background:none;
+border:none;
+color:#A9BDD8;
+font-size:18px;
+}
+
+.tabbar span{
+display:block;
+font-size:10px;
+margin-top:3px;
+}
+
+@media(max-width:420px){
+.grid{
+grid-template-columns:1fr;
+}
+}
